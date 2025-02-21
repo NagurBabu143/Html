@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f20f0f;
+  font-family: Arial, sans-serif;
+  background-image: url('i.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.turn-display {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0c0800;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 304px;
+  height: 307px;
+  border: 3px solid #4a09f1;
+  background-color: #b51515;
+}
+
+.square.o {
+  background-color: #f0a50d;
+}
+
+.square.x {
+  background-color: #85e488;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ff0a0a;
+  background-color: #eaeaea;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.square:hover {
+  background-color: #3410e7;
+}
+
+.square.x::before {
+  position: absolute;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  content: 'X';
+  color: #ff4c4c;
+}
+
+.square.o::after {
+  position: absolute;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  content: 'O';
+  color: #01060f;
+}

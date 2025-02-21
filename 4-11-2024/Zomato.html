@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zomato</title>
+    <link rel="icon" href="./images/21.jpg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <section class="search-section">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <img src="./images/17.jpg" alt="Restaurant Image" />
+          </div>
+          <h2>Discover the best food & drinks in Guntur</h2>
+          <div class="header-right">
+            <nav class="nav">
+              <ul>
+                <li><a href="#delivery">Delivery</a></li>
+                <li><a href="#dining">Dining Out</a></li>
+                <li><a href="#nightlife">Nightlife</a></li>
+              </ul>
+            </nav>
+            <div class="auth-buttons">
+              <button class="buttons">Log In</button>
+              <button class="buttons">Sign Up</button>
+            </div>
+          </div>
+        </div>
+        <div class="top-left">
+          <i class="fas fa-mobile-alt"></i>
+          <span>Get the App</span>
+        </div>
+
+        <div class="location-wrapper">
+          <select class="location-select">
+            <option selected disabled>Choose Location</option>
+            <option value="current">Use My Location</option>
+            <option value="newyork">New York</option>
+            <option value="losangeles">Los Angeles</option>
+            <option value="chicago">Chicago</option>
+          </select>
+          <input
+            type="text"
+            placeholder="Search for restaurants, cuisines, or dishes"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <div class="container">
+        <h2>Featured Collections</h2>
+        <div class="featured-banners">
+          <div class="banner">
+            <img src="./images/4.jpg" alt="Featured Collection" />
+            <p>Best Burgers in Town</p>
+          </div>
+          <div class="banner">
+            <img src="./images/5.jpg" alt="Featured Collection" />
+            <p>Top-Rated Indian Restaurants</p>
+          </div>
+          <div class="banner">
+            <img src="./images/6.jpg" alt="Featured Collection" />
+            <p>Cozy Cafes to Work From</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular-localities">
+      <div class="container">
+        <h2>Popular localities in and around Guntur</h2>
+        <div class="localities-wrapper">
+          <div class="locality-card">
+            <p class="locality-name">Lakshmipuram</p>
+            <div class="places">
+              <span>169 places</span>
+              <span class="arrow">></span>
+            </div>
+          </div>
+          <div class="locality-card">
+            <p class="locality-name">Brodipet</p>
+            <div class="places">
+              <span>139 places</span>
+              <span class="arrow">></span>
+            </div>
+          </div>
+          <div class="locality-card">
+            <p class="locality-name">Old Guntur</p>
+            <div class="places">
+              <span>101 places</span>
+              <span class="arrow">></span>
+            </div>
+          </div>
+          <div class="locality-card">
+            <p class="locality-name">Tenali Locality</p>
+            <div class="places">
+              <span>96 places</span>
+              <span class="arrow">></span>
+            </div>
+          </div>
+          <div class="locality-card">
+            <p class="locality-name">Amaravathi Road</p>
+            <div class="places">
+              <span>73 places</span>
+              <span class="arrow">></span>
+            </div>
+          </div>
+          <div class="locality-card">
+            <p class="locality-name">Srinivasa Nagar Colony</p>
+            <div class="places">
+              <span>61 places</span>
+              <span class="arrow">></span>
+            </div>
+          </div>
+          <div class="locality-card">
+            <p class="locality-name">Srinivasarao Pet</p>
+            <div class="places">
+              <span>58 places</span>
+              <span class="arrow">></span>
+            </div>
+          </div>
+          <div class="locality-card">
+            <p class="locality-name">Gorantla</p>
+            <div class="places">
+              <span>41 places</span>
+              <span class="arrow">></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="restaurant-listings">
+      <div class="container">
+        <h2>Popular Restaurants</h2>
+        <div class="restaurant-card">
+          <img src="./images/7.jpg" alt="Restaurant Image" />
+          <div class="restaurant-info">
+            <h3>Italian Bistro</h3>
+            <p>Italian, Pizza</p>
+            <p>Downtown | 4.5 ★</p>
+          </div>
+        </div>
+        <div class="restaurant-card">
+          <img src="./images/8.jpg" alt="Restaurant Image" />
+          <div class="restaurant-info">
+            <h3>Sushi Palace</h3>
+            <p>Japanese, Sushi</p>
+            <p>Midtown | 4.7 ★</p>
+          </div>
+        </div>
+        <div class="restaurant-card">
+          <img src="./images/9.jpg" alt="Restaurant Image" />
+          <div class="restaurant-info">
+            <h3>Green Planet Café</h3>
+            <p>Vegan, Healthy</p>
+            <p>West End | 4.6 ★</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="restaurant-details">
+      <div class="container">
+        <h2>Explore Dishes</h2>
+        <div class="dish-cards">
+          <div class="dish-card">
+            <img src="./images/10.jpg" alt="Dish Image" />
+            <h4>Margherita Pizza</h4>
+            <p>₹512.99</p>
+          </div>
+          <div class="dish-card">
+            <img src="./images/11.jpg" alt="Dish Image" />
+            <h4>Avocado Sushi Roll</h4>
+            <p>₹599.99</p>
+          </div>
+          <div class="dish-card">
+            <img src="./images/12.jpg" alt="Dish Image" />
+            <h4>Vegan Buddha Bowl</h4>
+            <p>₹514.99</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="get-zomato-app">
+      <div class="container">
+        <div class="app-content">
+          <div class="app-image">
+            <img src="./images/13.avif" alt="Get the Zomato App" />
+          </div>
+          <div class="app-details">
+            <h2>Get the Zomato app</h2>
+            <p>
+              We will send you a link, open it on your phone to download the
+              app.
+            </p>
+            <form>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+              <label for="phone">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone number"
+                required
+              />
+              <button
+                type="submit"
+                style="background-color: aliceblue; color: #000"
+              >
+                Share App Link
+              </button>
+            </form>
+            <p>Download app from:</p>
+            <div class="app-download-links">
+              <a href="#" style="color: black">Google Play</a> |
+              <a style="color: black" href="#">App Store</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="explore-options">
+      <div class="container">
+        <h2>Explore Options Near Me</h2>
+        <div class="options-wrapper">
+          <div class="option-card" >
+            <div class="option-title">
+              Popular Cuisines Near Me
+              <span class="arrow">➔</span>
+            </div>
+          </div>
+          <div class="option-card">
+            <div class="option-title">
+              Popular Restaurant Types Near Me
+              <span class="arrow">➔</span>
+            </div>
+          </div>
+          <div class="option-card">
+            <div class="option-title">
+              Top Restaurant Chains
+              <span class="arrow">➔</span>
+            </div>
+          </div>
+          <div class="option-card">
+            <div class="option-title">
+              Cities We Deliver To
+              <span class="arrow">➔</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="container">
+        <h2>Customer Reviews</h2>
+        <div class="review-card">
+          <h4>Jane Doe</h4>
+          <p>
+            Great experience! The food was amazing and the ambiance was perfect
+            for a relaxing dinner.
+          </p>
+          <p>Rating: ★★★★☆</p>
+        </div>
+        <div class="review-card">
+          <h4>John Smith</h4>
+          <p>
+            Loved the sushi! Fresh ingredients and excellent service. Will
+            definitely come back.
+          </p>
+          <p>Rating: ★★★★★</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="logo">
+            <img src="./images/14.avif" alt="Zomato Logo" />
+          </div>
+          <div class="footer-links">
+            <div class="column">
+              <h3>About Zomato</h3>
+              <ul>
+                <li><a href="#who-we-are">Who We Are</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#work-with-us">Work With Us</a></li>
+                <li><a href="#investor-relations">Investor Relations</a></li>
+                <li><a href="#report-fraud">Report Fraud</a></li>
+                <li><a href="#press-kit">Press Kit</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Zomaverse</h3>
+              <ul>
+                <li><a href="#blinkit">Blinkit</a></li>
+                <li><a href="#feeding-india">Feeding India</a></li>
+                <li><a href="#hyperpure">Hyperpure</a></li>
+                <li><a href="#zomato-live">Zomato Live</a></li>
+                <li><a href="#zomaland">Zomaland</a></li>
+                <li><a href="#weather-union">Weather Union</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>For Restaurants</h3>
+              <ul>
+                <li><a href="#partner-with-us">Partner With Us</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Apps For You</h3>
+              <ul>
+                <li><a href="#learn-more">Learn More</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Legal</h3>
+              <ul>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#terms">Terms</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            By continuing past this page, you agree to our Terms of Service,
+            Cookie Policy, Privacy Policy, and Content Policies. All trademarks
+            are properties of their respective owners. 2008-2024 © Zomato™ Ltd.
+            All rights reserved.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              aria-label="YouTube"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

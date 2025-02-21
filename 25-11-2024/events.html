@@ -1,0 +1,149 @@
+<!-- What is an Event?
+An event is any action that happens in the browser, such as:
+
+A user clicks a button
+A page loads
+A key is pressed
+The mouse moves
+An element gets focused or loses focus
+2. Common Types of Events:
+click: Triggered when an element is clicked.
+keydown: Triggered when a key is pressed down.
+keyup: Triggered when a key is released.
+load: Triggered when the page or an image has finished loading.
+mouseover: Triggered when the mouse pointer hovers over an element.
+mouseout: Triggered when the mouse pointer leaves an element.
+submit: Triggered when a form is submitted. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"> Event</h1>
+    <!-- <button onclick="alert('Button clicked!')">Click Me</button>
+
+
+   
+    <ul id="myList">
+        <li>Babu</li>
+        <li>shaik</li>
+    </ul>
+    <button onclick="addItem()">Add Item</button>
+    
+    
+
+    <p>Counter: <span id="counter">0</span></p>
+<button onclick="incrementCounter()">Increment</button>
+
+
+<p id="text">This is removable text.</p>
+<button onclick="removeElement()">Remove Text</button> -->
+
+
+<!-- onmouseover and onmouseout -->
+
+<!-- 
+<div id="hoverDiv" style="width: 200px; height: 100px; border: 1px solid black;">
+    Hover over me
+</div>
+
+<p id="hiddenText" style="display: none;">Hello, I am now visible!</p>
+<button id="hoverButton">Hover to Show Text</button>
+
+<p id="hoverText" style="font-size: 16px;">
+    Hover over this text to enlarge it.
+</p>
+
+<img id="hoverImage" src="image1.jpg" alt="Hover to change image" width="200">
+  -->
+
+
+<!-- onsubmit -->
+<!-- 
+<form onsubmit="return confirmSubmit()">
+    <input type="text" placeholder="Enter your name">
+    <button type="submit">Submit</button>
+</form>
+
+
+<form onsubmit="return validateEmail()">
+    <input type="email" id="emailInput" placeholder="Enter your email">
+    <button type="submit">Submit</button>
+</form> -->
+
+
+
+
+
+
+
+
+ <!-- onchange -->
+
+
+
+
+
+
+ <select id="colorSelect" onchange="changeBackgroundColor()">
+    <option value="">Select</option>
+    <option value="lightblue">Light Blue</option>
+    <option value="lightgreen">Light Green</option>
+    <option value="lightpink">Light Pink</option>
+    <option value="lightyellow">Light Yellow</option>
+    <option value="lavender">Lavender</option>
+    <option value="peachpuff">Peach Puff</option>
+    <option value="mistyrose">Misty Rose</option>
+    <option value="powderblue">Powder Blue</option>
+    <option value="thistle">Thistle</option>
+    <option value="beige">Beige</option>
+    <option value="cornflowerblue">Cornflower Blue</option>
+    <option value="aquamarine">Aquamarine</option>
+    <option value="palegoldenrod">Pale Goldenrod</option>
+    <option value="lightcoral">Light Coral</option>
+    <option value="honeydew">Honeydew</option>
+    <option value="ivory">Ivory</option>
+    <option value="seashell">Seashell</option>
+    <option value="mintcream">Mint Cream</option>
+    <option value="aliceblue">Alice Blue</option>
+    <option value="wheat">Wheat</option>
+    <option value="oldlace">Old Lace</option>
+</select>
+
+
+
+<!-- 
+addEventListener -->
+<!-- Click: Triggered when an element is clicked.
+Submit: Triggered when a form is submitted.
+Load: Triggered when the page has fully loaded.
+Mouseover: Triggered when the mouse pointer hovers over an element.
+Keydown/Keyup: Triggered when a key is pressed down or released.
+Change: Triggered when the value of an input element changes. -->
+
+
+
+<!-- 
+element.addEventListener(event, function, useCapture);
+element: The DOM element to attach the event to.
+event: The name of the event (e.g., 'click', 'keydown').
+function: The function to execute when the event occurs.
+useCapture: Optional. It determines whether the event should be captured during the capturing phase. Default is false. -->
+
+
+
+<!-- 
+<button id="eventButton">Click Me!</button>
+
+<div id="hoverDiv" style="width: 100px; height: 100px; background-color: blue;">
+    Hover over me!
+</div>  -->
+
+
+
+<script src="events.js"></script>
+</body>
+</html>

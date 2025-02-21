@@ -1,0 +1,594 @@
+## Comprehensive Guide to JavaScript Concepts
+
+This guide covers all JavaScript concepts with syntax, examples, and detailed explanations.
+
+---
+
+### 1. **Variables**
+
+#### Syntax:
+```javascript
+var variableName = value; // ES5
+let variableName = value; // ES6 (block-scoped)
+const variableName = value; // ES6 (block-scoped, immutable)
+```
+
+#### Example:
+```javascript
+var name = "John"; // Can be redeclared
+let age = 25;      // Can be updated but not redeclared
+const pi = 3.14;   // Cannot be updated or redeclared
+```
+
+#### Explanation:
+- **`var`**: Function-scoped and can be redeclared/updated. Use cautiously due to scoping issues.
+- **`let`**: Block-scoped and prevents redeclaration in the same scope. Ideal for variables that may change.
+- **`const`**: Block-scoped, must be initialized during declaration, and is immutable. Use for constants.
+
+---
+
+### 2. **Data Types**
+
+#### Syntax:
+```javascript
+// Primitive Data Types
+let stringType = "Hello";
+let numberType = 42;
+let booleanType = true;
+let nullType = null;
+let undefinedType;
+let symbolType = Symbol("id");
+
+// Non-Primitive Data Types
+let objectType = { key: "value" };
+let arrayType = [1, 2, 3];
+```
+
+#### Example:
+```javascript
+let isAvailable = true;  // Boolean
+let message = "Hello";   // String
+let count = 10;          // Number
+let person = { name: "Alice", age: 30 }; // Object
+let items = [1, 2, 3];   // Array
+```
+
+#### Explanation:
+- **Primitive Types**: Immutable and stored by value (e.g., `number`, `string`).
+- **Non-Primitive Types**: Mutable and stored by reference (e.g., `object`, `array`).
+
+---
+
+### 3. **Functions**
+
+#### Syntax:
+```javascript
+// Function Declaration
+function functionName(parameters) {
+  return result;
+}
+
+// Function Expression
+const functionName = function(parameters) {
+  return result;
+};
+
+// Arrow Function
+const functionName = (parameters) => result;
+```
+
+#### Example:
+```javascript
+// Function Declaration
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+// Arrow Function
+const add = (a, b) => a + b;
+
+console.log(greet("John")); // Output: Hello, John!
+console.log(add(5, 3));     // Output: 8
+```
+
+#### Explanation:
+- Functions encapsulate reusable logic.
+- **Arrow Functions**: Shorter syntax, no `this` binding, ideal for callbacks.
+
+---
+
+### 4. **Conditional Statements**
+
+#### Syntax:
+```javascript
+if (condition) {
+  // code to execute if condition is true
+} else if (anotherCondition) {
+  // code to execute if anotherCondition is true
+} else {
+  // code to execute if all conditions are false
+}
+```
+
+#### Example:
+```javascript
+let age = 18;
+
+if (age < 18) {
+  console.log("Minor");
+} else if (age === 18) {
+  console.log("Just became an adult");
+} else {
+  console.log("Adult");
+}
+```
+
+#### Explanation:
+- Controls program flow based on conditions.
+
+---
+
+### 5. **Loops**
+
+#### Syntax:
+```javascript
+// For Loop
+for (let i = 0; i < limit; i++) {
+  // code to execute
+}
+
+// While Loop
+while (condition) {
+  // code to execute
+}
+
+// Do-While Loop
+do {
+  // code to execute
+} while (condition);
+```
+
+#### Example:
+```javascript
+// For Loop
+for (let i = 0; i < 3; i++) {
+  console.log(i); // Output: 0, 1, 2
+}
+
+// While Loop
+let count = 0;
+while (count < 3) {
+  console.log(count); // Output: 0, 1, 2
+  count++;
+}
+```
+
+#### Explanation:
+- Loops execute code repeatedly until the condition is false.
+
+---
+
+### 6. **Objects**
+
+#### Syntax:
+```javascript
+let object = {
+  key: value,
+  method: function() {
+    return value;
+  }
+};
+```
+
+#### Example:
+```javascript
+let person = {
+  name: "Alice",
+  age: 25,
+  greet: function() {
+    return `Hello, my name is ${this.name}`;
+  }
+};
+
+console.log(person.greet()); // Output: Hello, my name is Alice
+```
+
+#### Explanation:
+- Objects are collections of key-value pairs and can contain methods.
+
+---
+
+### 7. **Arrays**
+
+#### Syntax:
+```javascript
+let array = [value1, value2, value3];
+```
+
+#### Example:
+```javascript
+let numbers = [1, 2, 3, 4, 5];
+console.log(numbers[0]); // Output: 1
+numbers.push(6);         // Add 6 to the end
+console.log(numbers);    // Output: [1, 2, 3, 4, 5, 6]
+```
+
+#### Explanation:
+- Arrays are ordered collections of elements.
+
+---
+
+### 8. **Promises**
+
+#### Syntax:
+```javascript
+let promise = new Promise((resolve, reject) => {
+  if (condition) {
+    resolve("Success");
+  } else {
+    reject("Failure");
+  }
+});
+```
+
+#### Example:
+```javascript
+let fetchData = new Promise((resolve, reject) => {
+  let success = true;
+  if (success) {
+    resolve("Data fetched successfully");
+  } else {
+    reject("Failed to fetch data");
+  }
+});
+
+fetchData
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error));
+```
+
+#### Explanation:
+- Promises manage asynchronous operations, with `resolve` for success and `reject` for failure.
+
+---
+
+### 9. **Asynchronous JavaScript**
+
+#### Callbacks:
+```javascript
+function fetchData(callback) {
+  setTimeout(() => {
+    callback("Data loaded");
+  }, 1000);
+}
+
+fetchData((message) => console.log(message));
+```
+
+#### Promises:
+```javascript
+let promise = new Promise((resolve, reject) => {
+  resolve("Success");
+});
+promise.then(data => console.log(data));
+```
+
+#### Async/Await:
+```javascript
+async function fetchData() {
+  let data = await fetch("url");
+  console.log(data);
+}
+```
+
+---
+
+### 10. **Classes**
+
+#### Syntax:
+```javascript
+class ClassName {
+  constructor(parameter) {
+    this.property = parameter;
+  }
+
+  method() {
+    // code
+  }
+}
+```
+
+#### Example:
+```javascript
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+  }
+}
+
+const john = new Person("John", 30);
+john.greet(); // Output: Hello, my name is John and I am 30 years old.
+```
+
+#### Explanation:
+- Classes provide a blueprint for creating objects with properties and methods.
+
+---
+
+### 11. **Modules**
+
+#### Syntax:
+```javascript
+// Export
+export const variable = "value";
+
+// Import
+import { variable } from './file.js';
+```
+
+#### Example:
+```javascript
+// math.js
+export const add = (a, b) => a + b;
+
+// app.js
+import { add } from './math.js';
+console.log(add(2, 3)); // Output: 5
+```
+
+#### Explanation:
+- Modules allow code to be organized into reusable pieces.
+
+---
+
+### 12. **Error Handling**
+
+#### Syntax:
+```javascript
+try {
+  // code
+} catch (error) {
+  console.log(error.message);
+} finally {
+  // cleanup code
+}
+```
+
+#### Example:
+```javascript
+try {
+  throw new Error("Something went wrong");
+} catch (error) {
+  console.log(error.message); // Output: Something went wrong
+} finally {
+  console.log("Cleanup");
+}
+```
+
+#### Explanation:
+- Handles errors gracefully and ensures cleanup code runs.
+
+---
+
+### 13. **Regular Expressions**
+
+#### Syntax:
+```javascript
+let regex = /pattern/flags;
+```
+
+#### Example:
+```javascript
+let text = "Hello World";
+let pattern = /hello/i;
+console.log(pattern.test(text)); // Output: true
+```
+
+#### Explanation:
+- Regular expressions match patterns within strings.
+
+---
+
+### 14. **Closures**
+
+#### Syntax:
+```javascript
+function outerFunction(outerVariable) {
+  return function innerFunction(innerVariable) {
+    console.log(`Outer: ${outerVariable}, Inner: ${innerVariable}`);
+  };
+}
+```
+
+#### Example:
+```javascript
+const outer = outerFunction("outside");
+outer("inside"); // Output: Outer: outside, Inner: inside
+```
+
+#### Explanation:
+- A closure is a function that retains access to its parent scope even after the parent function has closed.
+
+---
+
+### 15. **Destructuring**
+
+#### Syntax:
+```javascript
+let { key1, key2 } = object;
+let [value1, value2] = array;
+```
+
+#### Example:
+```javascript
+let person = { name: "Alice", age: 25 };
+let { name, age } = person;
+console.log(name); // Output: Alice
+
+let numbers = [1, 2, 3];
+let [first, second] = numbers;
+console.log(first); // Output: 1
+```
+
+#### Explanation:
+- Destructuring simplifies the extraction of values from arrays or objects.
+
+---
+
+### 16. **Spread and Rest Operators**
+
+#### Syntax:
+```javascript
+// Spread
+let newArray = [...oldArray];
+let newObject = { ...oldObject };
+
+// Rest
+function func(...args) {
+  console.log(args);
+}
+```
+
+#### Example:
+```javascript
+// Spread
+let numbers = [1, 2, 3];
+let newNumbers = [...numbers, 4, 5];
+console.log(newNumbers); // Output: [1, 2, 3, 4, 5]
+
+// Rest
+function add(...nums) {
+  return nums.reduce((sum, num) => sum + num, 0);
+}
+console.log(add(1, 2, 3)); // Output: 6
+```
+
+#### Explanation:
+- **Spread**: Expands arrays/objects into individual elements/properties.
+- **Rest**: Combines multiple elements into an array.
+
+---
+
+### 17. **Map, Filter, and Reduce**
+
+#### Syntax:
+```javascript
+// Map
+let newArray = array.map(callback);
+
+// Filter
+let filteredArray = array.filter(callback);
+
+// Reduce
+let result = array.reduce(callback, initialValue);
+```
+
+#### Example:
+```javascript
+let numbers = [1, 2, 3, 4];
+
+// Map
+let doubled = numbers.map(num => num * 2);
+console.log(doubled); // Output: [2, 4, 6, 8]
+
+// Filter
+let evens = numbers.filter(num => num % 2 === 0);
+console.log(evens); // Output: [2, 4]
+
+// Reduce
+let sum = numbers.reduce((total, num) => total + num, 0);
+console.log(sum); // Output: 10
+```
+
+#### Explanation:
+- **Map**: Transforms each array element.
+- **Filter**: Returns elements that satisfy a condition.
+- **Reduce**: Reduces the array to a single value.
+
+---
+
+### 18. **Event Handling**
+
+#### Syntax:
+```javascript
+element.addEventListener("event", callback);
+```
+
+#### Example:
+```javascript
+let button = document.querySelector("button");
+button.addEventListener("click", () => console.log("Button clicked!"));
+```
+
+#### Explanation:
+- Event listeners detect and respond to user actions.
+
+---
+
+### 19. **Async/Await**
+
+#### Syntax:
+```javascript
+async function func() {
+  let result = await promise;
+  console.log(result);
+}
+```
+
+#### Example:
+```javascript
+async function fetchData() {
+  let response = await fetch("https://api.example.com");
+  let data = await response.json();
+  console.log(data);
+}
+fetchData();
+```
+
+#### Explanation:
+- Simplifies working with promises, making asynchronous code look synchronous.
+
+---
+
+### 20. **Set and Map**
+
+#### Syntax:
+```javascript
+let set = new Set([values]);
+let map = new Map([[key, value]]);
+```
+
+#### Example:
+```javascript
+// Set
+let uniqueNumbers = new Set([1, 2, 3, 3]);
+console.log(uniqueNumbers); // Output: Set { 1, 2, 3 }
+
+// Map
+let userRoles = new Map([
+  ["admin", "Administrator"],
+  ["editor", "Content Editor"]
+]);
+console.log(userRoles); // Output: Map { 'admin' => 'Administrator', 'editor' => 'Content Editor' }
+
+
+
+// Select by ID
+const elementById = document.getElementById("myElement");
+
+// Select by class name
+const elementsByClass = document.getElementsByClassName("myClass");
+
+// Select by tag name
+const elementsByTag = document.getElementsByTagName("div");
+
+// Select using querySelector (first match)
+const elementByQuery = document.querySelector(".myClass");
+
+// Select using querySelectorAll (all matches)
+const allElementsByQuery = document.querySelectorAll("div.myClass");

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display My Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .data-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: left;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .data-header {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Display My Details</h1>
+    <button id="fetchDetails">Show My Details</button>
+    <div id="data-container"></div> <!-- Container for displaying data -->
+</div>
+
+<script>
+    // Function to fetch data from the API and display it
+    function fetchDataAndDisplay() {
+        fetch("https://dummyjson.com/c/da1e-5692-4b75-b818") // Replace with your API URL
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json(); // Parse JSON from response
+            })
+            .then((data) => {
+                displayAllData(data); // Call function to display all data
+            })
+            .catch((error) => {
+                console.error("Fetch error:", error);
+                document.getElementById("data-container").innerText = "Failed to fetch data. Please try again.";
+            });
+    }
+
+    // Function to display relevant data while excluding certain fields
+    function displayAllData(data) {
+        const container = document.getElementById("data-container");
+        container.innerHTML = ""; // Clear any existing data
+
+        if (data && typeof data === "object") {
+            // Create an array of keys to exclude
+            const excludeKeys = ["image", "contact_info", "profile_image", "projects", "certifications"];
+            
+            // Display each key-value pair except for excluded keys
+            for (const key in data) {
+                if (data.hasOwnProperty(key) && !excludeKeys.includes(key)) {
+                    const itemDiv = document.createElement("div");
+                    itemDiv.className = "data-item";
+
+                    itemDiv.innerHTML = `<div class="data-header">${key}:</div> ${data[key]}`;
+                    container.appendChild(itemDiv);
+                }
+            }
+        } else {
+            container.innerHTML = "<p>No valid data found.</p>";
+        }
+    }
+
+    // Attach event listener to the button
+    document.getElementById("fetchDetails").addEventListener("click", fetchDataAndDisplay);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f40e0e;
+}
+
+.container {
+    padding: 20px;
+    height: 2000px; 
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+.card p {
+    margin: 10px 0;
+    color: #0b0b0b;
+}
+
+
+.relative-card {
+    position: relative;
+    left: 10px;
+}
+
+
+.absolute-card {
+    position: absolute;
+    right: 50px;
+}
+
+.sticky-card {
+    position: sticky;
+    top: 50px; 
+    background-color: #f0f8ff;
+}
+
+
+.fixed-card {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 250px;
+    background-color: #fff0f0; 
+}
+

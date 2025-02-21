@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget </title>
+ 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h1 class="header">Budget </h1>
+        <h2 id="modify"></h2>
+        <div class="d-flex container">
+            <div class="part1">
+                <div class="box1">
+                    <form id="enter_budget">
+                        <label>Enter Your Budget</label>
+                        <input id="budget_amt" class="input" type="number" placeholder="Enter budget">
+                        <button class="btn btn-black" type="submit">Calculate</button>
+                    </form>
+                </div>
+                <div class="box2">
+                    <form id="enter_exp" data-task="addExpense" data-old="0">
+                        <label>Expense Name</label>
+                        <input id="exp_name" class="input" type="text" placeholder="Expense name">
+                        <label>Expense Amount</label>
+                        <input id="exp_amt" class="input" type="number" placeholder="Expense amount">
+                        <button class="btn btn-black" type="submit">Add Expense</button>
+                    </form>
+                </div>
+            </div>
+            <div class="part2">
+                <div class="card-box d-flex">
+                    <div class="card">
+                        <h2>Budget</h2>
+                        <h2 id="bud" class="green">$0</h2>
+                    </div>
+                    <div class="card">
+                        <h2>Expenses</h2>
+                        <h2 id="exp" class="red">$0</h2>
+                    </div>
+                    <div class="card">
+                        <h2>Balance</h2>
+                        <h2 id="balance" class="green">$0</h2>
+                    </div>
+                </div>
+                <table class="d-none" id="table">
+                    <thead>
+                        <tr>
+                            <th>Expense Title</th>
+                            <th>Expense Value</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+                <button id="clear_all" class="btn btn-red">Clear All</button>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

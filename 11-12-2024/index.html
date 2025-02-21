@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #display {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        #lapTimes {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        #lapCount {
+            margin-top: 10px;
+        }
+
+        select {
+            padding: 5px;
+        }
+        
+        .dark {
+            background-color: #333;
+            color: white;
+        }
+        
+        .light {
+            background-color: #f9f9f9;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stopwatch</h1>
+        <div id="display">00:00:00.000</div>
+        <button id="startStopBtn">Start</button>
+        <button id="resetBtn">Reset</button>
+        <button id="lapBtn">Lap</button>
+        <div id="lapTimes"></div>
+        <div id="lapCount">Total Laps: <span id="lapCounter">0</span></div>
+        <div>
+            <label for="themeSelect">Choose Theme:</label>
+            <select id="themeSelect">
+                <option value="default">Default</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+        </div>
+    </div>
+    <script>
+        let timerInterval;
+        let startTime;
+        let elapsedTime = 0;
+        let running = false;
+        const lapTimes = [];
+
+        const display = document.getElementById('display');
+        const startStopBtn = document.getElementById('startStopBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const lapBtn = document.getElementById('lapBtn');
+        const lapCounter = document.getElementById('lapCounter');
+
+        function formatTime(ms) {
+            const totalSeconds = Math.floor(ms / 1000);
+            const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+            const seconds = String(totalSeconds % 60).padStart(2, '0');
+            const milliseconds = String(ms % 1000).padStart(3, '0');
+            return `${minutes}:${seconds}:${milliseconds}`;
+        }
+
+        function updateDisplay() {
+            elapsedTime = Date.now() - startTime;
+            display.textContent = formatTime(elapsedTime);
+        }
+
+        startStopBtn.addEventListener('click', () => {
+            if (running) {
+                clearInterval(timerInterval);
+                startStopBtn.textContent = 'Start';
+            } else {
+                startTime = Date.now() - elapsedTime;
+                timerInterval = setInterval(updateDisplay, 10);
+                startStopBtn.textContent = 'Stop';
+            }
+            running = !running;
+        });
+
+        resetBtn.addEventListener('click', () => {
+            clearInterval(timerInterval);
+            elapsedTime = 0;
+            display.textContent = '00:00:000';
+            startStopBtn.textContent = 'Start';
+            running = false;
+            lapTimes.length = 0;
+            document.getElementById('lapTimes').innerHTML = '';
+            lapCounter.textContent = '0';
+        });
+
+        lapBtn.addEventListener('click', () => {
+            if (running) {
+                const currentLapTime = elapsedTime;
+                lapTimes.push(currentLapTime);
+                const lapDisplay = document.createElement('div');
+                lapDisplay.textContent = `Lap: ${formatTime(currentLapTime)}`;
+                document.getElementById('lapTimes').appendChild(lapDisplay);
+                lapCounter.textContent = lapTimes.length;
+            }
+        });
+
+        document.getElementById('themeSelect').addEventListener('change', (event) => {
+            document.body.className = event.target.value;
+        });
+    </script>
+</body>
+</html>

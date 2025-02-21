@@ -1,0 +1,135 @@
+## HTML Topics
+
+### Basics
+1. **Introduction to HTML**
+2. **HTML Document Structure**: `<!DOCTYPE>`, `<html>`, `<head>`, `<body>`
+3. **Basic Tags**: `<p>`, `<h1>` to `<h6>`, `<br>`, `<hr>`
+4. **Attributes**: `id`, `class`, `title`, `style`
+5. **Formatting Tags**: `<b>`, `<i>`, `<u>`, `<strong>`, `<em>`, `<mark>`, `<small>`, `<del>`, `<ins>`, `<sub>`, `<sup>`
+
+### Intermediate
+6. **Links and URLs**: `<a>` tag, `href` attribute, Absolute vs. Relative URLs
+7. **Images**: `<img>` tag, `src` and `alt` attributes
+8. **Lists**: Ordered (`<ol>`) and Unordered (`<ul>`), `<li>` tag
+9. **Tables**: `<table>`, `<tr>`, `<td>`, `<th>`, `<caption>`, `colspan`, `rowspan`
+10. **Forms**: `<form>`, `<input>`, `<textarea>`, `<button>`, `<select>`, `<option>`, `<label>`
+11. **Semantic Elements**: `<header>`, `<footer>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<figure>`, `<figcaption>`
+
+### Advanced
+12. **Multimedia**: `<video>`, `<audio>`, `<source>`
+13. **IFrames**: `<iframe>` for embedding external content
+14. **Meta Tags**: `<meta>` for SEO, viewport, and charset
+15. **HTML Entities**: Special characters like `&nbsp;`, `&amp;`, `&lt;`, `&gt;`
+16. **Accessibility**: `alt` attributes, ARIA roles, semantic tags
+17. **HTML5 Features**: Canvas (`<canvas>`), Geolocation, Web Storage (localStorage, sessionStorage)
+18. **Microdata**: Schema.org, `<meta>` attributes
+
+### Advanced Elements and Features
+19. **Custom Data Attributes**: Using `data-*` attributes
+20. **Interactive HTML**: `<details>`, `<summary>`, `<dialog>`
+21. **Progress and Meter**: `<progress>`, `<meter>`
+22. **Templates**: `<template>` and its use
+23. **Content Editable**: `contenteditable` attribute
+24. **Output Element**: `<output>` tag
+25. **Web Components**: Shadow DOM, custom elements, HTML imports
+26. **Internationalization**: `lang` attribute, `<bdo>` (bidirectional override)
+
+### HTML5 APIs
+27. **Drag and Drop API**
+28. **WebSockets**: Real-time communication
+29. **Service Workers**: Offline capabilities and caching
+30. **Push Notifications**
+31. **SVG and Canvas**: `<svg>` and `<canvas>`
+32. **HTML Imports**: Modularizing HTML components
+33. **Native HTML Validations**: Form validation attributes like `required`, `pattern`, `min`, `max`
+34. **Data Storage in HTML**: `<data>` tag
+
+### Optimization
+35. **Performance Enhancements**: Async and Defer in `<script>`
+36. **Lazy Loading**: `loading="lazy"` for images and iframes
+
+---
+
+## CSS Topics
+
+### Basics
+1. **Introduction to CSS**
+2. **CSS Syntax**: Selectors, Properties, and Values
+3. **Types of CSS**: Inline, Internal, External
+4. **Selectors**: Universal (`*`), Type, Class (`.class`), ID (`#id`), Group, Attribute, Pseudo-classes, Pseudo-elements
+
+### Styling
+5. **Text and Font Properties**: `color`, `font-family`, `font-size`, `font-style`, `font-weight`, `text-align`, `text-decoration`, `line-height`
+6. **Background**: `background-color`, `background-image`, `background-position`, `background-repeat`, `background-size`
+7. **Box Model**: `margin`, `border`, `padding`, `width`, `height`
+
+### Positioning and Layout
+8. **Display**: `block`, `inline`, `inline-block`, `none`
+9. **Position**: `static`, `relative`, `absolute`, `fixed`, `sticky`
+10. **Float and Clear**: `float`, `clear`
+11. **Flexbox**: `display: flex;`, `justify-content`, `align-items`, `flex-wrap`
+12. **Grid**: `display: grid;`, `grid-template-rows`, `grid-template-columns`, `grid-gap`
+13. **Z-index**: Layer ordering with `z-index`
+14. **Multi-column Layouts**: `column-count`, `column-gap`, `column-rule`
+
+### Advanced Styling Techniques
+15. **Clip and Masking**: `clip-path`, `mask`
+16. **Filter Effects**: `filter` for blur, brightness, contrast, grayscale
+17. **Custom Fonts**: `@font-face`, `font-display`
+18. **Writing Modes**: `writing-mode` for vertical text
+19. **CSS Shapes**: `shape-outside`
+20. **CSS Blend Modes**: `mix-blend-mode`, `background-blend-mode`
+21. **Custom Scrollbars**: `::-webkit-scrollbar`, `::-webkit-scrollbar-thumb`
+22. **Backdrop Filters**: `backdrop-filter` for frosted glass effects
+
+### Responsive Design
+23. **Media Queries**: `@media`, breakpoints
+24. **CSS Units**: Relative units (`%`, `em`, `rem`, `vh`, `vw`), absolute units (`px`, `cm`, `mm`)
+25. **Viewport Meta Tag**: Configuring viewport for mobile responsiveness
+26. **Dark Mode Support**: `@media (prefers-color-scheme: dark)`
+27. **Container Queries**: Styling based on container size
+
+### Advanced Animations and Transitions
+28. **Transitions**: `transition-property`, `transition-duration`, `transition-timing-function`
+29. **Transformations**: `rotate`, `scale`, `translate`, `skew`
+30. **Keyframes Animations**: `@keyframes`, `animation-name`, `animation-duration`
+31. **Scroll Animations**: Using `scroll-behavior`, libraries like ScrollReveal
+32. **Animation Timing Functions**: `ease`, `ease-in`, `ease-out`, `cubic-bezier()`
+33. **Animation Events**: `animationstart`, `animationend`, `animationiteration`
+34. **CSS Scroll Snap**: `scroll-snap-type`, `scroll-snap-align`
+
+### Optimization and Maintenance
+35. **Critical CSS**: Loading above-the-fold CSS
+36. **CSS Cascade Layers**: Managing specificity with `@layer`
+37. **PostCSS**: Autoprefixing and optimizing CSS
+38. **Scoped CSS**: Shadow DOM for component-specific styles
+39. **Web Performance**: Minification, optimizing images, critical CSS
+
+### Framework and Tooling
+40. **CSS-in-JS**: Libraries like Emotion, Styled-Components
+41. **CSS Frameworks**: Bootstrap, TailwindCSS, Bulma
+42. **Utility-First CSS**: Functional CSS with Tailwind
+43. **Preprocessors**: SASS, LESS
+44. **BEM Methodology**: Block Element Modifier convention for naming
+
+---
+
+## General Web Development Enhancements
+
+### Accessibility
+1. **ARIA Landmarks**: `role="navigation"`, `role="main"`
+2. **Keyboard Navigation**: Managing `tabindex`
+3. **Focus Management**: Focus states for better UX
+
+### Debugging and Optimization
+4. **Browser Developer Tools**: Inspecting and debugging HTML/CSS
+5. **Cross-Browser Compatibility**: Vendor prefixes, testing
+
+### Progressive Web Design
+6. **Responsive Web Design**: Mobile-first design principles
+7. **Advanced Custom Properties**: CSS variables for theming
+
+### Miscellaneous
+8. **CSS Houdini**: Unlocking new styling capabilities
+9. **Subgrid in CSS Grid**: Advanced grid layouts
+10. **Logical Properties**: For internationalization and RTL support

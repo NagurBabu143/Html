@@ -1,0 +1,60 @@
+Document Structure
+<!DOCTYPE html>: Declares the document type (HTML5).
+<html lang="en">: Root element; lang specifies the language (English).
+Head Section
+<head>: Contains metadata and resources.
+<meta charset="UTF-8">: Sets character encoding to UTF-8.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Configures responsive design.
+<title>Basic HTML Form</title>: Sets the title displayed in the browser tab.
+Body Section
+<body>: Contains the content displayed in the browser.
+<h1>Registration Form</h1>: Main heading of the form.
+Form Section
+<form action="#" method="post">: Begins the form.
+action="#": URL to send the form data (currently points to nowhere).
+method="post": Sends data via HTTP POST.
+Input Fields
+Name Field:
+
+<label for="name">Name:</label>: Associates label with input.
+<input type="text" id="name" name="name" required>: Text input for name.
+Email Field:
+
+<label for="email">Email:</label>: Label for email input.
+<input type="email" id="email" name="email" required>: Input for email with validation.
+Gender Field:
+
+<label for="gender">Gender:</label>: Label for gender dropdown.
+<select id="gender" name="gender" required>: Dropdown for gender selection.
+<option value="male">Male</option>: Option for male.
+<option value="female">Female</option>: Option for female.
+<option value="other">Other</option>: Option for other.
+Age Field:
+
+<label for="age">Age:</label>: Label for age input.
+<input type="number" id="age" name="age" required>: Numeric input for age.
+Phone Field:
+
+<label for="phone">Phone:</label>: Label for phone input.
+<input type="tel" id="phone" name="phone" required>: Telephone input.
+Postal Code Field:
+
+<label for="postal-code">Postal Code:</label>: Label for postal code input.
+<input type="text" id="postal-code" name="postal-code" required>: Text input for postal code.
+Address Field:
+
+<label for="address">Address:</label>: Label for address.
+<textarea id="address" name="address" rows="4" required></textarea>: Multi-line input for address.
+Occupation Field:
+
+<label for="occupation">Occupation:</label>: Label for occupation input.
+<input type="text" id="occupation" name="occupation" required>: Text input for occupation.
+Submit Button
+<button type="submit">Submit</button>: Button to submit the form.
+Closing Tags
+</form>: Ends the form.
+</body>: Ends the body section.
+</html>: Ends the HTML document.
+type="text": Specifies that the input is plain text.
+id="name": Unique identifier for the input element.
+name="name": Used as the key in the form submission data.

@@ -1,0 +1,156 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styles */
+  h1 {
+    text-align: center;
+    color: #444;
+    font-size: 24px;
+  }
+  
+  /* Input field styles */
+  #taskInput {
+    width: calc(100% - 120px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  /* Buttons styling */
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  #addTaskBtn {
+    background-color: #28a745;
+  }
+  
+  #addTaskBtn:hover {
+    background-color: #218838;
+  }
+  
+  #clearAllBtn {
+    background-color: #dc3545;
+    margin-left: 10px;
+  }
+  
+  #clearAllBtn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Task list container */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Individual task item */
+  .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .task-item:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Task text */
+  .task-text {
+    flex-grow: 1;
+    margin-left: 10px;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  /* Completed task text styling */
+  .task-text.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+  }
+  
+  /* Checkbox */
+  .task-checkbox {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+  
+  /* Buttons for task actions */
+  .edit-btn, .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .edit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .delete-btn {
+    background-color: #ffc107;
+    color: #fff;
+    margin-left: 5px;
+  }
+  
+  .delete-btn:hover {
+    background-color: #e0a800;
+  }
+  
+  /* Save button for inline editing */
+  .save-btn {
+    background-color: #17a2b8;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  
+  .save-btn:hover {
+    background-color: #117a8b;
+  }
+  
+  /* Edit input field for inline editing */
+  .edit-input {
+    flex-grow: 1;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  

@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #a43030;
+    color: rgb(198, 247, 107);
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: rgb(197, 237, 140);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #faf5f5;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background: #b4d4e7;
+}
+
+.hero-container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    gap: 40px;
+}
+
+.hero-left {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-right img {
+    width: 100%;
+    border-radius: 100%;
+    height: 150px;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+    background: #e19595;
+}
+
+.career-1 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.career-card {
+    background-color: #b4d4e7;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #a43030;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+@media screen and (max-width: 600px) {
+  
+    
+    header {
+        background-color: #5d7691;
+        color: rgb(1, 2, 15);
+        padding: 10px 0;
+    }
+   
+    .nav-links a {
+        color: rgb(16, 16, 16);
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    h1{
+        color:white;
+    }
+    h2{
+        color: white;
+    }
+    
+    .hero {
+        flex-direction: column;
+        background-color: #e19595;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .career-1 {
+        flex-direction: column;
+    }
+
+    .career-card {
+        width: 99%;
+        margin-bottom: 20px;
+        background-color: #ba2e2e;
+        color: aquamarine;
+    }
+   
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+    footer {
+        background-color: #5d7691;
+        color: rgb(24, 1, 1);
+       
+    }
+}
+

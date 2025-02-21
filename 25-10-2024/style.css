@@ -1,0 +1,107 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: aqua;
+  }
+  .profile-card {
+    width: 300px;
+    background-color: #3e482b;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+  }
+  
+  
+  .profile-header {
+    background-color: #0073e6;
+    padding: 20px;
+  }
+  .profile-header:hover{
+    background-color: #c105fa;
+  }
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+  }
+  h2{
+    background: #0cca1c;
+    border-radius: 29px;
+  }
+  
+  .profile-info {
+    padding: 20px;
+  }
+  
+  .name {
+    font-size: 1.5em;
+    color: #0c0c0c;
+    position: relative;
+  }
+
+  .name::first-letter{
+    color: #c51b1b;
+  }
+  
+  .name::after {
+    content:'';
+    display: block;
+    width: 200px;
+    height: 4px;
+    background-color: #c105fa;
+    margin: 5px auto;
+  }
+  
+  .description {
+    font-size: 0.9em;
+    color: #dc1212;
+    margin-top: 10px;
+  }
+ 
+  .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  .social-links li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    color: #ecfd04fd;
+    font-weight: bold;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #07da3c;
+    color: #0d0d0d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .contact-btn:hover{
+    background-color: #dc1212;
+  }
+
+  .contact-btn::before {
+    content: '📧';
+    margin-right: 5px;
+  }
+  

@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.part1 {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.part2 {
+    flex: 1;
+}
+
+.box1, .box2 {
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-black {
+    background-color: #333;
+}
+
+.btn-black:hover {
+    background-color: #555;
+}
+
+.btn-red {
+    background-color: #e74c3c;
+}
+
+.btn-red:hover {
+    background-color: #c0392b;
+}
+
+.btn-green {
+    background-color: #2ecc71;
+}
+
+.btn-green:hover {
+    background-color: #27ae60;
+}
+
+.card-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+.d-none {
+    display: none;
+}
+
+.red {
+    color: #e74c3c;
+}
+
+.green {
+    color: #2ecc71;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .part1 {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,135 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #61a7ec;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #e39595;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #343a40;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px 15px;
+    margin-left: 10px;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 91, 187, 0.5);
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #fd0c0c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+#todoList {
+    margin-top: 20px;
+}
+
+.todoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #74adf3;
+    background-color: #5fa6f7;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.todoItem:hover {
+    background-color: #e15e5e;
+}
+
+.todoItem.checked {
+    background-color: #d1e7dd;
+    color: #495057;
+    text-decoration: line-through;
+}
+
+.todoItem span {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.todoItem.checked span {
+    color: #6c757d;
+}
+
+button i {
+    color: #ffffff;
+}
+
+button:hover i {
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    input[type="text"] {
+        width: calc(100% - 90px);
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .todoItem span {
+        font-size: 1em;
+    }
+}
+
+#completedCount, #pendingCount {
+    font-weight: bold;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="card relative-card">
+            <h2>Relative Position</h2>
+            <img src="./image/image1.jpg" >
+            <p>Relative Position in CSS positions an element relative to its normal position in the document flow. This means that even though the element can be moved (offset) using properties like top, left, right, or bottom, it still takes up space in the original spot, and the layout around it doesn't change.</p>
+        </div>
+
+       
+        <div class="card absolute-card">
+            <h2>Absolute Position</h2>
+            <img src="./image/image2.jpg" >
+            <p>Absolute Position in CSS positions an element relative to its nearest positioned ancestor, or if there is no positioned ancestor, it will be positioned relative to the initial containing block (usually the viewport). An element with position: absolute is removed from the normal document flow, meaning it doesn't affect the positions of other elements.</p>
+        </div>
+
+        
+        <div class="card sticky-card">
+            <h2>Sticky Position</h2>
+            <img src="./image/image3.jpg" >
+            <p>Sticky Position in CSS is a hybrid between relative and fixed positioning. A sticky element toggles between these two behaviors based on the user's scroll position. Initially, it behaves like a relative element, but as the user scrolls past it, it "sticks" to a specified position (e.g., top of the viewport) and remains fixed in place until a certain scroll threshold is met.</p>
+        </div>
+
+       
+        <div class="card fixed-card">
+            <h2>Fixed Position</h2>
+            <img src="./image/image4.jpg" >
+            <p>Fixed Position in CSS positions an element relative to the viewport, meaning the element stays in the same position on the screen, regardless of how much the page is scrolled. Unlike absolute, fixed elements are not affected by their parent elements and are completely removed from the normal document flow.</p>
+        </div>
+    </div>
+</body>
+</html>
